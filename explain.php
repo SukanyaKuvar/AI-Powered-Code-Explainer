@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-$apiKey = "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"; // no quotes inside the key
+//API Key of https://console.groq.com/keys
+$apiKey = "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";
 
 $code = $_POST['code'] ?? '';
 if (trim($code) === '') {
@@ -25,7 +26,7 @@ $data = [
     "messages" => [
         [
             "role" => "system",
-            "content" => "You are a senior software engineer explaining code accurately."
+            "content" => "Explaining code accurately."
         ],
         [
             "role" => "user",
